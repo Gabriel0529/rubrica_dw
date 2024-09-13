@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -104,6 +105,25 @@
             height: 30px;
         }
 
+        /* Branding section */
+        .branding {
+            display: flex;
+            flex-direction: column-reverse;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding-top: 40px;
+        }
+
+        .branding h2 {
+            font-size: 36px;
+        }
+
+        .branding img {
+            width: 80%;
+        }
+
         /* Services section */
         .services {
             padding: 60px 0;
@@ -118,10 +138,15 @@
         }
 
         .card {
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            gap: 12px;
             background-color: white;
             color: #333;
             padding: 20px;
             border-radius: 5px;
+            text-align: start;
         }
 
         /* CTA section */
@@ -197,8 +222,25 @@
                 width: 22%;
             }
         }
+
+        @media (min-width: 972px) {
+            .branding {
+                flex-direction: row;
+                text-align: start;
+                gap: 100px;
+            }
+
+            .branding img {
+                width: 40%;
+            }
+
+            .branding div {
+                width: 40%;
+            }
+        }
     </style>
 </head>
+
 <body>
     <header>
         <nav class="container">
@@ -234,18 +276,30 @@
             </div>
         </section>
 
+        <section class="branding container">
+            <img src="./resources/designer-team-working-on-creative-design.png" alt="">
+            <div>
+                <h2>Branding & Design System</h2>
+                <p>Commonly Used In The Graphic, Print & Publishing Industris For Previewing Visual Layout And Mockups
+                </p>
+            </div>
+        </section>
+
         <section class="services container">
             <h2>Custome & Plugin Development</h2>
             <div class="service-cards">
                 <div class="card">
+                    <img src="./resources/website-4943 1.png" alt="">
                     <h3>WEBSITE DESIGN</h3>
                     <p>Lorem ipsum has been the industry's standard dummy text ever since the 1500s.</p>
                 </div>
                 <div class="card">
+                    <img src="./resources/LOGO2.png">
                     <h3>WEB DEVELOPMENT</h3>
                     <p>Lorem ipsum has been the industry's standard dummy text ever since the 1500s.</p>
                 </div>
                 <div class="card">
+                    <img src="./resources/mobile-phone-1164 1.png" alt="">
                     <h3>MOBILE APP DEVELOPMENT</h3>
                     <p>Lorem ipsum has been the industry's standard dummy text ever since the 1500s.</p>
                 </div>
@@ -297,4 +351,5 @@
         </div>
     </footer>
 </body>
+
 </html>
